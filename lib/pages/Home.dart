@@ -1,4 +1,7 @@
+import 'file:///C:/Users/fatim/AndroidStudioProjects/arshiamart/lib/pages/CategoryPage/Category.dart';
+import 'package:arshiamart/pages/CategoryPage/CategoryHome.dart';
 import 'package:arshiamart/pages/profile.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -12,7 +15,8 @@ class _HomeState extends State<Home> {
 
   List<Widget> tabPages = [
     Screen1(),
-    Screen2(),
+//    Screen2(),
+    CategoryHome(),
     Profile(),
   ];
   @override
@@ -37,8 +41,10 @@ class _HomeState extends State<Home> {
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
                 icon: Icon(Icons.home), title: Text("Home")),
+//            BottomNavigationBarItem(
+//                icon: Icon(Icons.search), title: Text("Search")),
             BottomNavigationBarItem(
-                icon: Icon(Icons.mail), title: Text("Messages")),
+                icon: Icon(Icons.category), title: Text("Categories")),
             BottomNavigationBarItem(
                 icon: Icon(Icons.person), title: Text("Profile")),
           ]),
